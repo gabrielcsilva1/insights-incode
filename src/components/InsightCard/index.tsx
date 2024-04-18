@@ -25,8 +25,8 @@ export function InsightCard({ label, date, $bgColor }: InsightCardProps) {
             <Dialog.Portal>
                 <Overlay $bgColor={$bgColor}/>
                 <ModalContent>
-                    {label}
-                    
+                    <p>{label}</p>
+                    <p>{date}</p>
                     <button className="bottom-right">
                         <Trash color={COLORS.WHITE} size={52}/>
                     </button>

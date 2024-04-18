@@ -13,3 +13,4 @@ export const COLORS = {
     GRAY_400: "#444444",
     GRAY_500: "#262626",
 } as const
+
