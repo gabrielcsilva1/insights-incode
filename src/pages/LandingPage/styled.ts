@@ -53,6 +53,7 @@ export const Form = styled.form`
         background-color: ${({theme}) => theme.COLORS.YELLOW};
         border: none;
         border-radius: 8px;
+        cursor: pointer;
         padding: 0.7rem;
 
         line-height: 0;

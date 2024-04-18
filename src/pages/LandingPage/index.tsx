@@ -1,11 +1,14 @@
-import { InsightCard } from "@/components/InsightCard";
 import { Container, Form, Header, InsightsCardsContainer, PlusIcon, Text } from "./styled";
+// import { useTheme } from "styled-components";
+
 import lightbullImg from '@/assets/lightbulb.svg';
-import { useTheme } from "styled-components";
+import { insights } from '@/utils/data';
+
+import { InsightCard } from "@/components/InsightCard";
 
 
 export default function LandingPage(){
-    const { COLORS } = useTheme();
+    // const { COLORS } = useTheme();
     return (
         <Container>
             <Header>
@@ -22,30 +25,11 @@ export default function LandingPage(){
 
             <Text>Lista dos seus insights:</Text>
             <InsightsCardsContainer>
-                <InsightCard 
-                    label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                    date="29 / dez /2022"
-                    bgColor={COLORS.RED}
-                    
-                />
-                <InsightCard 
-                    label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                    date="29 / dez /2022"
-                    bgColor={COLORS.YELLOW}
-                    
-                />
-                <InsightCard 
-                    label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                    date="29 / dez /2022"
-                    bgColor={COLORS.BLUE}
-                    
-                />
-                <InsightCard 
-                    label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                    date="29 / dez /2022"
-                    bgColor={COLORS.PINK}
-                    
-                />
+                {insights.map((value) => {
+                    return (
+                        <InsightCard label={value.label} date={value.date} $bgColor={value.color}/>   
+                    )
+                })}
             </InsightsCardsContainer>
         </Container>
     )
