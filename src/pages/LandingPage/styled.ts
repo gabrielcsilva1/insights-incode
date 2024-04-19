@@ -4,10 +4,16 @@ import { Plus } from '@phosphor-icons/react';
 export const Container = styled.div`
     max-width: 500px;
     margin: 11rem auto 1.6rem;
+
+    @media (max-width: 640px) {
+        max-width: none;
+        margin: 11rem 3.2rem;
+    }
 `
 
 export const Header = styled.header`
     display: flex;
+    flex: 1;
     align-items: center;
     gap: 1.2rem;
     justify-content: center;
@@ -57,6 +63,16 @@ export const Form = styled.form`
         padding: 0.7rem;
 
         line-height: 0;
+        transition: opacity 0.3s;
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+    }
+
+    @media (max-width: 640px) {
+        gap: 1.2rem;
     }
 `
 
@@ -73,4 +89,14 @@ export const InsightsCardsContainer = styled.div`
     grid-auto-rows: 20rem;
 
     margin-top: 1rem;
+
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+       
+    }
+
+    &:has(button:hover) button:not(:hover) {
+        opacity: 0.6;
+        scale: 0.98;
+    }
 `

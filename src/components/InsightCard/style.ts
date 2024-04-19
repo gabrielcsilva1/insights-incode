@@ -16,6 +16,8 @@ export const InsightCardContainer = styled.button<Props>`
     overflow: hidden;
 
     background-color: ${({$bgColor}) => $bgColor};
+
+    transition: all 0.3s;
 `
 
 export const InsightsLabel = styled.p`
@@ -28,6 +30,7 @@ export const InsightsLabel = styled.p`
 `
 
 export const InsightsDate = styled.p`
+    margin-top: 1rem;
     font-size: 1rem;
 `
 
@@ -49,6 +52,24 @@ export const ModalContent = styled(Dialog.Content)`
     justify-content: center;
     gap: 0.6rem;
 
+    & > textarea {
+        border: none;
+        border-radius: 6px;
+        background-color: transparent;
+        padding: 1.2rem;
+        width: 67.2rem;
+        text-align: center;
+        margin: 0 1.2rem;
+
+        font-size: 1.8rem;
+
+        resize: none;
+
+        &:hover {
+            box-shadow: 0 0 0 2px ${({theme}) => theme.COLORS.GRAY_200};
+        }
+    }
+
     & > button {
         all: unset;
         position: fixed;
@@ -56,17 +77,17 @@ export const ModalContent = styled(Dialog.Content)`
 
         cursor: pointer;
 
-        &[class="top-right"] {
+        &[class="close-btn"] {
             top: 32px;
             right: 32px;
         }
 
-        &[class="bottom-right"] {
+        &[class="delete-btn"] {
             bottom: 79px;
             right: 73px;
         }
 
-        &[class="bottom-left"] {
+        &[class="edit-btn"] {
             bottom: 79px;
             left: 73px;
         }
