@@ -13,12 +13,11 @@ Insights é uma página para registrar novas ideias, criada usando react e style
 - Typescript
 
 ## Pré-requisitos
-- NodeJs
-- npm
+- <a href="https://nodejs.org/en">NodeJs</a>
 
 ## Instalando o projeto
-Após clonar o projeto ou fazer o download, abra um terminal na pasta do projeto e execute os comandos:
-<br/>
+Após clonar o projeto ou fazer o download do zip, abra um terminal na pasta do projeto e execute os respectivos comandos:
+
 1- Instalando as dependências
 ```bash
   npm install
