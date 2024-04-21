@@ -7,7 +7,7 @@ const colorsArray = [
     "#D00000",
 ]
 
-export function getRandomColor(lengthArray: number): string{
+export function getNextColor(lengthArray: number): string{
     const index = lengthArray % colorsArray.length;
 
     return colorsArray[index];
